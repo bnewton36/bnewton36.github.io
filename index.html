@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>My site is live on GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Ben Newton — software engineer. Clemson University. AI, testing, and automation.">
+  <title>Ben Newton | Software Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7zm0 0v6h5M8 12h8m-8 4h8"/></symbol>
+    <symbol id="layers" viewBox="0 0 48 48"><path d="m24 5 18 10-18 10L6 15Zm-18 20 18 10 18-10M6 35l18 10 18-10"/></symbol>
+    <symbol id="code" viewBox="0 0 48 48"><path d="m14 15-10 9 10 9m20-18 10 9-10 9M29 8 19 40"/></symbol>
+    <symbol id="cube" viewBox="0 0 48 48"><path d="m24 4 18 10v20L24 44 6 34V14Zm0 20 18-10M6 14l18 10v20"/></symbol>
+  </defs></svg>
+  <div class="opening">
+    <canvas id="network" aria-hidden="true"></canvas>
+    <header class="site-header"><div class="container header-inner">
+      <a class="wordmark" href="#" aria-label="Ben Newton home">BN<span>.</span></a>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    </div></header>
+    <main id="main" class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Software Engineer <span>/</span> Clemson University</p>
+        <h1 id="hero-title">Ben Newton<span>.</span></h1>
+        <h2 class="specialties">AI<span>.</span> Testing<span>.</span> Automation<span>.</span></h2>
+        <p class="intro">I build intelligent tools, automate workflows,<br class="desktop-break"> and engineer reliable software.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <button class="button secondary" type="button" data-dialog="resume-dialog"><svg class="icon" aria-hidden="true"><use href="#document"/></svg> Resume</button>
+        </div>
+      </section>
+      <section class="selected-work" id="projects" aria-labelledby="work-title">
+        <h2 class="section-label" id="work-title">Selected Work</h2>
+        <div class="project-grid">
+          <button class="project-card" type="button" data-dialog="testing-dialog"><svg class="project-icon" aria-hidden="true"><use href="#layers"/></svg><span class="project-copy"><span class="project-title">AI-Assisted Testing</span><span class="project-description">Intelligent test generation and automation for higher quality, faster releases.</span></span><svg class="icon card-arrow" aria-hidden="true"><use href="#arrow"/></svg></button>
+          <button class="project-card" type="button" data-dialog="kpi-dialog"><svg class="project-icon" aria-hidden="true"><use href="#code"/></svg><span class="project-copy"><span class="project-title">Engineering KPI Tools</span><span class="project-description">Tools for engineering insights, workflow visibility, and team productivity.</span></span><svg class="icon card-arrow" aria-hidden="true"><use href="#arrow"/></svg></button>
+          <button class="project-card" type="button" data-dialog="aurora-dialog"><svg class="project-icon" aria-hidden="true"><use href="#cube"/></svg><span class="project-copy"><span class="project-title">Aurora ReAX</span><span class="project-description">A modular automation platform for complex, real-world workflows.</span></span><svg class="icon card-arrow" aria-hidden="true"><use href="#arrow"/></svg></button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="container further-content">
+    <section id="about" class="detail-section about-section" aria-labelledby="about-title">
+      <h2 class="section-label" id="about-title">About Me</h2>
+      <div class="about-copy">
+        <p>Hey, I'm Ben Newton! I'm a Computer Science student at Clemson University with a strong interest in artificial intelligence, data analysis, and AI integration. I'm particularly interested in exploring how AI can be incorporated into existing software systems to solve real-world problems, improve efficiency, and create more intelligent applications.</p>
+        <p>Throughout my time at Clemson, I've developed a strong foundation in programming, software development, and problem-solving. I enjoy applying what I learn in the classroom to hands-on projects, whether that's developing applications from the ground up, exploring emerging technologies, or finding new ways to automate complex processes.</p>
+        <p>What excites me most about the future of software development is the opportunity to bridge the gap between traditional software workflows and artificial intelligence. I'm always looking to expand my knowledge, challenge myself with new technologies, and build software that makes a meaningful impact.</p>
+      </div>
+    </section>
+    <section id="experience" class="detail-section"><h2 class="section-label">Experience</h2><h3>Software Engineering</h3><p class="affiliation">Clemson University</p><p>Building intelligent tools, automating workflows, and engineering reliable software.</p></section>
+    <footer id="contact" class="contact-section"><div><h2 class="section-label">Contact</h2><p>Let's connect<span>.</span></p></div><a class="button secondary" href="https://github.com/bnewton36">Find me on GitHub <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><small>© <span id="year">2026</span> Ben Newton</small></footer>
+  </div>
+  <dialog id="resume-dialog" aria-labelledby="resume-title"><h2 id="resume-title">Resume</h2><p>My resume will be available here soon.</p><form method="dialog"><button class="button primary">Close</button></form></dialog>
+  <dialog id="testing-dialog" aria-labelledby="testing-title"><p class="eyebrow">Selected Work</p><h2 id="testing-title">AI-Assisted Testing</h2><p>Intelligent test generation and automation for higher quality, faster releases.</p><p class="coming-soon">Project details coming soon.</p><form method="dialog"><button class="button primary">Close</button></form></dialog>
+  <dialog id="kpi-dialog" aria-labelledby="kpi-title"><p class="eyebrow">Selected Work</p><h2 id="kpi-title">Engineering KPI Tools</h2><p>Tools for engineering insights, workflow visibility, and team productivity.</p><p class="coming-soon">Project details coming soon.</p><form method="dialog"><button class="button primary">Close</button></form></dialog>
+  <dialog id="aurora-dialog" aria-labelledby="aurora-title"><p class="eyebrow">Selected Work</p><h2 id="aurora-title">Aurora ReAX</h2><p>A modular automation platform for complex, real-world workflows.</p><p class="coming-soon">Project details coming soon.</p><form method="dialog"><button class="button primary">Close</button></form></dialog>
+</body>
 </html>
